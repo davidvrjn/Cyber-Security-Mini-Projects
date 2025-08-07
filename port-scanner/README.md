@@ -1,6 +1,6 @@
 # Python Port Scanner
 
-A fast, multi-threaded port scanner built in Python.
+A multi-threaded port scanner built in Python.
 
 ## Features
 
@@ -27,11 +27,32 @@ python3 main.py
 
 ## Usage
 
+### Command Line Mode
+Run with arguments for automated scanning:
+```bash
+# Scan common ports
+python3 main.py -t google.com --common
+
+# Scan port range
+python3 main.py -t 192.168.1.1 --start 1 --end 1000
+
+# Scan specific ports
+python3 main.py -t scanme.nmap.org -p 22,80,443,8080
+
+# Show help
+python3 main.py --help
+```
+
 ### Interactive Mode
-Run the scanner and follow the prompts:
+Run without arguments for guided scanning:
 ```bash
 python3 main.py
 ```
+
+The interactive mode now offers three options:
+1. **Quick scan** - Scans 15 most common ports
+2. **Port range** - Specify start and end ports (e.g., 1-1000)
+3. **Specific ports** - Enter comma-separated ports (e.g., 22,80,443)
 
 ### Examples
 
@@ -51,7 +72,7 @@ python3 main.py
 
 ```
 ==================================================
-        Python Port Scanner v1.0
+        Python Port Scanner v1.1
 ==================================================
 Enter target IPv4 or hostname (default: 127.0.0.1): 
 Target validated: 127.0.0.1

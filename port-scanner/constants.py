@@ -30,4 +30,4 @@ DEFAULT_TARGET = "127.0.0.1"
 
 #App info
 APP_NAME = "Python Port Scanner"
-APP_VERSION = "1.0"
+APP_VERSION = "1.1"
